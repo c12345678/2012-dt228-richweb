@@ -1,0 +1,8 @@
+$(function() {
+  var availableAddresses = [
+  ];
+
+  $( "#address" ).autocomplete({
+    source: availableAddresses
+  });
+});
