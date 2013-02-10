@@ -1,5 +1,6 @@
 BootstrapExample::Application.routes.draw do
   get "maps/index"
+  get "maps/cities"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
