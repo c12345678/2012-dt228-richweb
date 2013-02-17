@@ -3,7 +3,9 @@ class MapsController < ApplicationController
   end
 
   def cities
-    names = City.where('name LIKE ?', params[:term] + '%').map(&:name)
+    names =
+    	City.where('name LIKE ?', params[:term] + '%')
+            .map(&:name)
     render json: names
   end
 end
