@@ -1,3 +1,9 @@
-// Place all the styles related to the tweets controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#new_tweet {
+  textarea {
+    margin: 0;
+    padding: 0;
+    margin-right: 15px;
+    }
+  margin-left: 35px;
+  }

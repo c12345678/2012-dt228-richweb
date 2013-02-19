@@ -1,2 +1,14 @@
-<h1>Tweets#index</h1>
-<p>Find me in app/views/tweets/index.html.erb</p>
+<%= form_for @tweet do |f| %>
+  <%= f.text_area :body, class: "field span5", rows: 2, placeholder: "Compose new tweet ..." %>
+  <%= f.submit "Create", class: "btn btn-primary", id: 'tweet_create' %>
+  <h3 id="counter"></h3>
+<% end %>
+
+<table id="tweet_list" class="table table-striped table-bordered span6">
+  <% @tweets.each_with_index do |tweet, idx| %>
+    <tr>
+      <td> <%= tweet.body %> </td>
+    </tr>
+  <% end %>
+</table>
+
