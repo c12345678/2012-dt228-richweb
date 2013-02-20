@@ -1,0 +1,21 @@
+<div ng-controller="TweetCtrl">
+  <form ng-submit="insertTweet()" id="new-tweet">
+    <textarea class="field span5"
+              rows"2"
+              placeholder="Compose new tweet ..."
+              ng-model="newTweet.body"></textarea>
+    <input type="submit" value="Create" class="btn btn-primary">
+    <h3 ng-bind="remaining(newTweet.body)">140</h3>
+  </form>
+
+  <table id="tweet-list" class="table table-striped table-bordered span6">
+    <tr ng-repeat="tweet in tweets">
+      <td>
+        {{tweet.body}}
+      </td>
+      <td class="tweet-remove">
+        <i class="icon-trash" ng-click="removeTweet(tweet.id, $index)"></i>
+      </td>
+    </tr>
+  </table>
+</div>
