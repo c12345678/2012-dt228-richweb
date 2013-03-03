@@ -1,9 +1,10 @@
 <div ng-controller="TweetCtrl">
   <form ng-submit="insertTweet()" id="new-tweet">
     <textarea class="field span5"
-              rows"2"
+              rows="2"
               placeholder="Compose new tweet ..."
-              ng-model="newTweet.body"></textarea>
+              ng-model="newTweet.body">
+    </textarea>
     <input type="submit" value="Create" class="btn btn-primary">
     <h3 ng-bind="remaining(newTweet.body)">140</h3>
   </form>

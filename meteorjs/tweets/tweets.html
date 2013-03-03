@@ -1,0 +1,55 @@
+<head>
+  <title>Tweets</title>
+</head>
+
+<body>
+  <header class="navbar navbar-fixed-top">
+    <nav class="navbar-inner">
+      <div class="container">
+      </div>
+    </nav>
+  </header>
+  <div id="main" role="main">
+    <div class="container">
+      <div class="content">
+        <div class="row">
+          <div class="span12">
+            {{> compose}}
+            {{> list}}
+          </div>
+        </div>
+        <footer>
+        </footer>
+      </div>
+    </div> <!--! end of .container -->
+  </div> <!--! end of #main -->
+
+</body>
+
+<template name="compose">
+  <form id="new-tweet">
+    <textarea class="field span5"
+              id="tweet-body"
+              rows="2"
+              placeholder="Compose new tweet ..."
+              required></textarea>
+    <input type="submit" value="Create" class="btn btn-primary">
+  </form>
+</template>
+
+<template name="list">
+  <table class="span6">
+    <tbody>
+      {{#each tweets}}
+        <tr>
+          <td>
+            {{body}}
+          </td>
+          <td class="tweet-remove">
+            <i class="icon-trash"></i>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</template>

@@ -1,0 +1,14 @@
+body { padding-top: 60px; }
+
+#new-tweet textarea {
+    margin: 0;
+    padding: 0;
+    margin-right: 15px;
+}
+#new-tweet {
+    margin-left: 20px;
+}
+
+.tweet-remove {
+    width: 18px;
+}
